@@ -1,15 +1,14 @@
-# Factorio Achievement Enabler for macOS
+# Factorio (Space Age) Achievement Enabler for macOS
 
-macOS Apple Silicon patcher for the native Steam build of Factorio `2.0.77` (`mac-arm64`).
+macOS Apple Silicon patcher for the native Steambuild of Factorio `2.0.77` (Space Age DLC installed) (`mac-arm64`).
 
 It removes Factorio's modded-save achievement gates in the supported binary so modded saves can use the normal local and Steam achievement paths. It does not edit save files.
 
 ## Status
 
-- Supported: Factorio `2.0.77` Steam, native macOS ARM64.
-- Tested on: macOS Apple Silicon, Steam running, Factorio `2.0.77`.
-- Tested mod: `qiMenu 0.2.91`.
-- Not supported: Intel macOS, non-Steam builds, other Factorio versions, saves where cheats/console/map-editor usage disabled achievements.
+- Supported: Factorio `2.0.77` (Space Age DLC) Steam, native macOS ARM64.
+- Tested on: macOS Apple Silicon, Steam running, Factorio `2.0.77` with Space Age DLC installed.
+- Not supported: Intel macOS, non-DLC Steam builds, non-Steam builds, other Factorio versions, saves where cheats/console/map-editor usage disabled achievements.
 
 If Factorio updates and the expected instruction bytes change, the patcher fails with a mismatch instead of guessing.
 
