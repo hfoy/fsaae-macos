@@ -27,7 +27,7 @@ cat > "$MOD_DIR/fae_test_mod_0.1.0/info.json" <<'EOF_INFO'
   "version": "0.1.0",
   "title": "FAE macOS Smoke Test Mod",
   "author": "FAE macOS",
-  "factorio_version": "2.0"
+  "factorio_version": "2.1"
 }
 EOF_INFO
 

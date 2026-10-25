@@ -83,7 +83,7 @@ mkdir -p "$WRITE_DATA/saves" "$MOD_DIR/fae_qimenu_achievement_test_0.1.0"
 cp -pR "$REMOTE" "$REMOTE_BACKUP"
 /usr/bin/find "$NORMAL_SAVE_DIR" -maxdepth 1 -name "*.zip" -type f -exec stat -f "%N %z %m" {} \; | sort > "$WORK_DIR/save-zips-before.txt"
 
-python3 - "$PLAYER_DATA" "$MOD_DIR/qiMenu_0.2.91.zip" <<'PY'
+python3 - "$PLAYER_DATA" "$MOD_DIR/qiMenu_0.3.0.zip" <<'PY'
 import json
 import pathlib
 import subprocess
@@ -93,7 +93,7 @@ import urllib.parse
 player_data = pathlib.Path(sys.argv[1])
 output = pathlib.Path(sys.argv[2])
 data = json.load(player_data.open())
-url = "https://mods.factorio.com/download/qiMenu/678eccd7229939d0373f6f86?" + urllib.parse.urlencode(
+url = "https://mods.factorio.com/download/qiMenu/6a3aa1b39245f1b9ed0cd411?" + urllib.parse.urlencode(
     {"username": data["service-username"], "token": data["service-token"]}
 )
 subprocess.run(["curl", "-fsSL", url, "-o", str(output)], check=True)
@@ -111,7 +111,7 @@ locale=auto
 EOF_CONFIG
 
 cat > "$MOD_DIR/fae_qimenu_achievement_test_0.1.0/info.json" <<'EOF_INFO'
-{"name":"fae_qimenu_achievement_test","version":"0.1.0","title":"FAE qiMenu Achievement Test","author":"FAE","factorio_version":"2.0","dependencies":["base >= 2.0", "qiMenu >= 0.2.91"]}
+{"name":"fae_qimenu_achievement_test","version":"0.1.0","title":"FAE qiMenu Achievement Test","author":"FAE","factorio_version":"2.1","dependencies":["base >= 2.1", "qiMenu >= 0.3.0"]}
 EOF_INFO
 
 cat > "$MOD_DIR/fae_qimenu_achievement_test_0.1.0/data.lua" <<EOF_DATA
